@@ -1,0 +1,1 @@
+{"name":"Local: test_modular","url":"/home/satendra/Workspace/dsa/codechef/test_modular.cpp","tests":[{"id":1620714177177,"input":"2\n100 200\n50 100","output":""},{"id":1620714454225,"input":"3\n3 5\n3 6\n3 10","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/home/satendra/Workspace/dsa/codechef/test_modular.cpp","group":"local","local":true}

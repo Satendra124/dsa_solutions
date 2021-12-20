@@ -1,0 +1,101 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+
+int maxModels(int arr[],int cur,int n,int lasti,int dp[][100000]){
+    if(cur==n) return 0;
+
+    if(lasti==-1||((cur+1)%(lasti+1)==0&&arr[cur]>arr[lasti])){
+        //use of leave take max
+        // cout<<"calling for: "<<cur+1<<" "<<cur<<endl;
+        // cout<<"calling for: "<<cur+1<<" "<<lasti<<endl;
+        if(dp[cur+1][cur]==0) dp[cur+1][cur] = maxModels(arr,cur+1,n,cur,dp)+1;
+        if(dp[cur+1][lasti]==0) dp[cur+1][lasti] = maxModels(arr,cur+1,n,lasti,dp);
+        return max(dp[cur+1][cur],dp[cur+1][lasti]);
+    }else{
+        //leave this
+        // cout<<"calling for: "<<cur+1<<" "<<lasti<<endl;
+        if(dp[cur+1][lasti]==0) dp[cur+1][lasti] = maxModels(arr,cur+1,n,lasti,dp);
+        return dp[cur+1][lasti];
+    }
+
+};
+
+
+int main()
+{
+    int t;
+    cin>>t;
+    while (t--)
+    {
+        
+        int n;
+        cin>>n;
+        int arr[n];
+        int dp[n+1][100000]={0};
+        for (int i = 0; i < n; i++)
+        {
+            cin>>arr[i];
+        }
+        // for (int i = 0; i < n+1; i++)
+        // {
+        //     for (int j = 0; j < 100000; j++)
+        //     {
+        //         dp[i][j] = -1;
+        //     }
+            
+        // }
+        cout<<maxModels(arr,0,n,-1,dp)<<endl;
+        
+    }
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+#include <bits/stdc++.h>
+using namespace std;
+
+
+int maxModels(int arr[],int cur,int n,int lasti){
+    if(cur==n) return 0;
+
+    if(lasti==-1||((cur+1)%(lasti+1)==0&&arr[cur]>arr[lasti])){
+        //use of leave take max
+        // cout<<"calling for: "<<cur+1<<" "<<cur<<endl;
+        // cout<<"calling for: "<<cur+1<<" "<<lasti<<endl;
+        return max(maxModels(arr,cur+1,n,cur)+1,maxModels(arr,cur+1,n,lasti));
+    }else{
+        //leave this
+        // cout<<"calling for: "<<cur+1<<" "<<lasti<<endl;
+        return maxModels(arr,cur+1,n,lasti);
+    }
+
+};
+
+
+int main()
+{
+    int t;
+    cin>>t;
+    while (t--)
+    {
+        
+        int n;
+        cin>>n;
+        int arr[n];
+        for (int i = 0; i < n; i++)
+        {
+            cin>>arr[i];
+        }
+        cout<<maxModels(arr,0,n,-1)<<endl;
+        
+    }
+    return 0;
+}

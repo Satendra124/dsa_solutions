@@ -1,0 +1,15 @@
+{
+    "files.associations": {
+        "iostream": "cpp",
+        "numeric": "cpp",
+        "ostream": "cpp",
+        "cmath": "cpp",
+        "initializer_list": "cpp",
+        "valarray": "cpp",
+        "deque": "cpp",
+        "string": "cpp",
+        "vector": "cpp",
+        "tuple": "cpp",
+        "*.tcc": "cpp"
+    }
+}

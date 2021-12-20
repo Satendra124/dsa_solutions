@@ -1,0 +1,1 @@
+{"name":"Local: gfg","url":"/home/satendra/Workspace/dsa/gfg.cpp","tests":[{"id":1622969967648,"input":"1\n35\nT|F^F&T|F^F^F^T|T&T^T|F^T^F&F^T|T^F","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/home/satendra/Workspace/dsa/gfg.cpp","group":"local","local":true}

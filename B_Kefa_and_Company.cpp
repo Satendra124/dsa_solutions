@@ -1,0 +1,24 @@
+#include <bits/stdc++.h>
+using namespace std;
+int mod = 1e9+7;
+#define fast ios_base::sync_with_stdio(0);cin.tie(0);cout.tie(0);
+typedef long long int ll;
+int main()
+{
+    fast;
+    int n,d;
+    cin>>n>>d;
+    vector< pair<int,int> > friends;
+    for (int i = 0; i < n; i++)
+    {
+        int m,s;
+        cin>>m>>s;
+        friends.push_back({s,m});
+    }
+
+    sort(friends.begin(),friends.end(),greater<pair<int,int>>());
+    
+
+
+    
+}
